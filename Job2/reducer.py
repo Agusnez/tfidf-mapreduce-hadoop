@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import sys
 
-# TF-IDF computation: Phase Two
-# Reducer output: <<word, document_name>   <word_count, word_count_in_document>>
+# TF-IDF computation: Phase Two (Computing the Term Frequency - TF)
+# Reducer output: word,document_name    word_count,word_count_in_document
 
 doc_word_count = 0
 old_docName = None
@@ -10,6 +10,7 @@ doc_words = {}
 doc_word_count1 = {}
 val = []
 
+# input comes from STDIN (standard input)
 for line in sys.stdin:
     line = line.rstrip()
     (doc_name, val) = line.split('\t', 1)

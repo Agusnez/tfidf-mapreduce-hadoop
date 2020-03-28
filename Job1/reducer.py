@@ -26,8 +26,8 @@ for line in sys.stdin:
         # ignore/discard this line
         continue
 
-    # this IF-switch only works because Hadoop sorts map output
-    # by key (here: word) before it is passed to the reducer
+    # If we encounter the same word again, increase the counter
+    # This is only possible if all words are sorted (like Hadoop does)
     if current_word == word:
         current_count += count
     else:

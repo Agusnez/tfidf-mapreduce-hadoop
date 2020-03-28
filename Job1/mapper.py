@@ -8,6 +8,8 @@ import os
 
 # input comes from STDIN (standard input)
 for line in sys.stdin:
+    # Hadoop has this environment variable set
+    # Allows to retrieve the name of the file
     filename = os.environ['mapreduce_map_input_file']
 
     # remove punctuation symbols, leading and trailing whitespaces

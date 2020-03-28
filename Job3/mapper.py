@@ -1,9 +1,10 @@
 #!/usr/bin/env python 
 import sys
 
-# TF-IDF computation: Phase Three
-# Mapper output: <word, <document_name, word_count, number_of_words_in_document, 1>>
+# TF-IDF computation: Job 3
+# Mapper output: word   document_name,word_count,number_of_words_in_document,1
 
+# input comes from STDIN (standard input)
 for line in sys.stdin:
     line = line.rstrip()
     (key, value) = line.split('\t', 1)
